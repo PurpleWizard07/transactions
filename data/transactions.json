@@ -1,0 +1,32 @@
+[
+    {
+        "id": "t1",
+        "friendId": "friend1",
+        "date": "2025-10-03",
+        "time": "18:30",
+        "upiApp": "Google Pay",
+        "amount": 250.00,
+        "note": "Dinner",
+        "status": "pending"
+    },
+    {
+        "id": "t2",
+        "friendId": "friend2",
+        "date": "2025-10-01",
+        "time": "12:15",
+        "upiApp": "PhonePe",
+        "amount": 100.50,
+        "note": "Movie ticket",
+        "status": "pending"
+    },
+    {
+        "id": "t3",
+        "friendId": "friend1",
+        "date": "2025-09-28",
+        "time": "09:00",
+        "upiApp": "Paytm",
+        "amount": 75,
+        "note": "Coffee",
+        "status": "paid"
+    }
+]

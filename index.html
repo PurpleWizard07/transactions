@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pending Transactions - Login</title>
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+    <main class="container">
+        <div id="login-view" class="card">
+            <h1>Welcome</h1>
+            <p>Enter username and passkey to view your pending transactions.</p>
+            <form id="login-form">
+                <label>
+                    Username
+                    <input id="username" required autocomplete="username" />
+                </label>
+                <label>
+                    Passkey
+                    <input id="password" type="password" required autocomplete="current-password" />
+                </label>
+                <div class="actions">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+            <p class="note">If you are the maker, use your maker credentials to access the maker tools.</p>
+        </div>
+
+        <div id="app-view" class="hidden">
+            <div class="topbar">
+                <h2 id="welcome"></h2>
+                <div>
+                    <button id="logout-btn" class="small">Logout</button>
+                </div>
+            </div>
+
+            <div id="friend-panel" class="card hidden">
+                <h3>Your pending transactions</h3>
+                <div id="table-wrap"></div>
+            </div>
+
+            <div id="maker-panel" class="card hidden">
+                <h3>Maker dashboard</h3>
+                <p>You are signed in as maker. To update transactions you can either edit
+                    <code>/data/transactions.json</code> in the GitHub web editor (recommended) or click the button
+                    below to open the in-browser admin tool which creates a JSON you can paste to GitHub.</p>
+                <a href="/admin.html" class="btn">Open Admin Editor</a>
+                <h4 style="margin-top:1rem">All transactions (preview)</h4>
+                <div id="maker-table-wrap"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/users.js"></script>
+    <script src="/app.js"></script>
+</body>
+
+</html>

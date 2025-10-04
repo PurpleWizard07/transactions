@@ -1,0 +1,124 @@
+/* styles.css - minimal clean styling */
+:root {
+    --bg: #f6f9fb;
+    --card: #fff;
+    --accent: #3b82f6;
+    --muted: #6b7280;
+    --maxw: 860px;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: #111827;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 36px 16px;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--maxw);
+}
+
+.card {
+    background: var(--card);
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    margin-bottom: 16px;
+}
+
+.hidden {
+    display: none
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 8px 0
+}
+
+p {
+    margin: 0 0 12px 0;
+    color: var(--muted)
+}
+
+label {
+    display: block;
+    margin-bottom: 10px
+}
+
+label input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 14px
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px
+}
+
+button,
+.btn,
+a.btn {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.small {
+    padding: 6px 10px;
+    font-size: 13px
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px
+}
+
+.tx-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px
+}
+
+.tx-table th,
+.tx-table td {
+    padding: 8px;
+    border-bottom: 1px solid #f3f4f6;
+    text-align: left
+}
+
+.controls {
+    display: flex;
+    gap: 8px
+}
+
+.note {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 8px
+}

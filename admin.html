@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Admin Editor - Transactions</title>
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+    <main class="container">
+        <div class="card">
+            <h1>Admin: Edit transactions</h1>
+            <p>This tool lets you edit the transactions JSON in the browser and then <strong>copy</strong> the JSON to
+                paste into GitHub (or download as a file). This does NOT auto-save to the site — you must paste the JSON
+                to the repo or upload to your server to update live site content.</p>
+
+            <div class="controls">
+                <button id="load-btn">Load current transactions</button>
+                <button id="download-btn">Download JSON file</button>
+                <button id="copy-btn">Copy JSON to clipboard</button>
+            </div>
+
+            <textarea id="json-area" rows="18" style="width:100%; font-family: monospace; margin-top: 1rem;"></textarea>
+
+            <h3 style="margin-top:1rem">How to update on live site</h3>
+            <ol>
+                <li>Open your GitHub repo and go to <code>data/transactions.json</code>.</li>
+                <li>Click the pencil (edit) icon and replace contents with the JSON from this textarea.</li>
+                <li>Commit changes. Vercel will auto-deploy the update.</li>
+            </ol>
+
+            <p class="note">Tip: Keep the JSON valid. Use ISO date strings like <code>2025-10-03</code> and time like
+                <code>18:30</code>.</p>
+        </div>
+    </main>
+
+    <script src="/admin.js"></script>
+</body>
+
+</html>
