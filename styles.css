@@ -1,4 +1,60 @@
 /* styles.css - minimal clean styling */
+/* Friend management styles */
+.friend-management {
+    margin-bottom: 20px;
+}
+
+.friend-selector {
+    margin-bottom: 15px;
+}
+
+.friend-selector select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+}
+
+#friend-transaction-form {
+    background-color: #f8fafc;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.form-row label {
+    flex: 1;
+}
+
+#add-transaction-form input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+}
+
+#friend-transactions {
+    margin-top: 20px;
+}
+
+.edit-btn, .delete-btn {
+    margin-right: 5px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #e5e7eb;
+    margin: 20px 0;
+}
 :root {
     --bg: #f6f9fb;
     --card: #fff;

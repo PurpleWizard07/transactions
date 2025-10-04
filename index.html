@@ -44,9 +44,39 @@
 
             <div id="maker-panel" class="card hidden">
                 <h3>Maker dashboard</h3>
-                <p>You are signed in as maker. To update transactions you can either edit
-                    <code>/data/transactions.json</code> in the GitHub web editor (recommended) or click the button
-                    below to open the in-browser admin tool which creates a JSON you can paste to GitHub.</p>
+                <div class="friend-management">
+                    <h4>Manage Friend Transactions</h4>
+                    <div class="friend-selector">
+                        <label for="friend-select">Select Friend:</label>
+                        <select id="friend-select">
+                            <option value="">-- Select a friend --</option>
+                            <!-- Friend options will be populated by JavaScript -->
+                        </select>
+                    </div>
+                    <div id="friend-transaction-form" class="hidden">
+                        <h4>Add New Transaction</h4>
+                        <form id="add-transaction-form">
+                            <div class="form-row">
+                                <label>Date: <input type="date" id="txn-date" required></label>
+                                <label>Time: <input type="time" id="txn-time"></label>
+                            </div>
+                            <div class="form-row">
+                                <label>UPI App: <input type="text" id="txn-upi-app"></label>
+                                <label>Amount: <input type="number" id="txn-amount" step="0.01" required></label>
+                            </div>
+                            <label>Note: <input type="text" id="txn-note"></label>
+                            <div class="actions">
+                                <button type="submit" class="btn">Add Transaction</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="friend-transactions" class="hidden">
+                        <h4>Friend's Transactions</h4>
+                        <div id="friend-table-wrap"></div>
+                    </div>
+                </div>
+                <hr>
+                <p>You can also edit transactions directly:</p>
                 <a href="/admin.html" class="btn">Open Admin Editor</a>
                 <h4 style="margin-top:1rem">All transactions (preview)</h4>
                 <div id="maker-table-wrap"></div>

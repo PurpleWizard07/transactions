@@ -4,9 +4,32 @@
     const downloadBtn = document.getElementById('download-btn');
     const copyBtn = document.getElementById('copy-btn');
     const textarea = document.getElementById('json-area');
+    
+    // Check if we have transactions in sessionStorage (from friend management)
+    function getSessionTransactions() {
+        const txnData = sessionStorage.getItem('current_transactions');
+        if (txnData) {
+            try {
+                return JSON.parse(txnData);
+            } catch (e) {
+                console.error('Error parsing session transactions:', e);
+            }
+        }
+        return null;
+    }
 
     async function load() {
         try {
+            // First check if we have transactions in session storage
+            const sessionTxns = getSessionTransactions();
+            if (sessionTxns) {
+                textarea.value = JSON.stringify(sessionTxns, null, 2);
+                // Clear the session storage after loading
+                sessionStorage.removeItem('current_transactions');
+                return;
+            }
+            
+            // Otherwise load from file
             const r = await fetch('/data/transactions.json', { cache: "no-store" });
             if (!r.ok) throw new Error('Failed to load transactions.json');
             const j = await r.json();
